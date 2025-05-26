@@ -1345,3 +1345,922 @@ Use case: Games, charts, image editing tools, animations.
 
 
 
+### 101. What is accessibility in HTML?
+
+Accessibility refers to **making web content usable for everyone**, including:
+
+* People with **visual, auditory, motor, or cognitive impairments**.
+* Users using **assistive technologies** like screen readers.
+
+🔍 It ensures:
+
+* Keyboard navigation is possible.
+* Screen readers can read elements clearly.
+* Proper **semantic HTML** is used.
+
+
+
+### 102. What is ARIA?
+
+**ARIA (Accessible Rich Internet Applications)** is a set of attributes that make dynamic content and custom UI elements accessible.
+
+✅ Common ARIA roles and properties:
+
+* `role="button"` – defines a custom element as a button.
+* `aria-label="Close menu"` – labels an unlabeled button for screen readers.
+* `aria-hidden="true"` – hides elements from assistive technologies.
+
+> ⚠️ ARIA is a fallback. Always prefer **native HTML** elements first.
+
+
+
+### 103. What is the `role` attribute?
+
+The `role` attribute explicitly defines the **type of element** for assistive technologies.
+
+**Example:**
+
+```html
+<div role="navigation">
+  <ul>
+    <li><a href="/">Home</a></li>
+  </ul>
+</div>
+```
+
+🟢 Use case:
+If you're using non-semantic tags (like `<div>`), `role` helps screen readers identify their purpose.
+
+
+
+### 104. What is the use of `aria-label`?
+
+The `aria-label` provides an **invisible label** that screen readers will announce.
+
+**Example:**
+
+```html
+<button aria-label="Close">✖</button>
+```
+
+Even though the button only has an icon (`✖`), screen readers will announce it as “Close”.
+
+
+
+### 105. What are best practices for accessible forms?
+
+✅ Use `<label>` for each input:
+
+```html
+<label for="email">Email:</label>
+<input type="email" id="email" name="email">
+```
+
+✅ Group related fields with `<fieldset>` and `<legend>`.
+
+✅ Use `aria-required="true"` or native `required` attribute.
+
+✅ Provide clear error messages with `aria-describedby`.
+
+✅ Ensure all inputs are **keyboard navigable**.
+
+
+
+
+
+
+### 106. What is the `<meta>` tag?
+
+The `<meta>` tag defines **metadata** like character encoding, page description, author, keywords, etc.
+
+**Example:**
+
+```html
+<meta name="author" content="Vikash Kumar">
+<meta name="description" content="A guide to learning HTML and web development.">
+```
+
+
+
+### 107. What is the viewport meta tag?
+
+The **viewport meta tag** helps make web pages **responsive** on mobile devices.
+
+**Example:**
+
+```html
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+```
+
+🧠 This ensures:
+
+* The page scales properly on different screen sizes.
+* Improves mobile usability and SEO.
+
+
+
+### 108. How do you set `charset` in HTML?
+
+The `charset` attribute defines the **character encoding** used in the document.
+
+**Example (UTF-8, most common):**
+
+```html
+<meta charset="UTF-8">
+```
+
+Ensures support for **all languages and symbols**.
+
+
+
+### 109. What is the use of `<meta name="description">`?
+
+This meta tag gives a **short summary** of the page content (used in search engine results).
+
+**Example:**
+
+```html
+<meta name="description" content="Learn HTML5 from beginner to advanced with examples.">
+```
+
+🔍 Google often displays this in search snippets, which affects **click-through rates** (CTR).
+
+
+
+### 110. How does HTML help in SEO?
+
+HTML plays a **critical role** in SEO (Search Engine Optimization):
+
+✅ Use of:
+
+* `<title>` for page titles.
+* `<h1> to <h6>` for headings.
+* `<a href>` for internal/external linking.
+* `<meta>` for descriptions and keywords.
+* Semantic elements like `<article>`, `<nav>`, `<section>` for structure.
+
+✅ Helps:
+
+* Search engines understand page structure and content.
+* Improve indexing and visibility in search results.
+
+
+
+
+
+### 111. How do you link a CSS file in HTML?
+
+You use the `<link>` tag inside the `<head>` of your HTML document:
+
+```html
+<link rel="stylesheet" href="styles.css">
+```
+
+* `rel="stylesheet"` specifies the relationship.
+* `href="styles.css"` points to the CSS file.
+
+
+
+### 112. What are inline, internal, and external CSS?
+
+✅ **Inline CSS**
+Applied directly on an element using the `style` attribute:
+
+```html
+<p style="color: red;">Inline styled text</p>
+```
+
+✅ **Internal CSS**
+Placed inside a `<style>` tag within the `<head>`:
+
+```html
+<head>
+  <style>
+    p { color: blue; }
+  </style>
+</head>
+```
+
+✅ **External CSS**
+Linked using a separate `.css` file:
+
+```html
+<link rel="stylesheet" href="styles.css">
+```
+
+**Best Practice:** Use **external CSS** for maintainability.
+
+
+
+### 113. How do you add JavaScript in HTML?
+
+You use the `<script>` tag:
+
+✅ **Internal JS** (inside HTML):
+
+```html
+<script>
+  alert("Hello from JavaScript!");
+</script>
+```
+
+✅ **External JS** (from a file):
+
+```html
+<script src="script.js"></script>
+```
+
+
+
+### 114. What is the `defer` and `async` attribute in scripts?
+
+✅ `defer`:
+
+* Loads script **in the background** while parsing HTML.
+* Executes **after HTML is fully parsed** (in order).
+
+```html
+<script src="main.js" defer></script>
+```
+
+✅ `async`:
+
+* Loads and executes script **as soon as it’s ready** (not in order).
+
+```html
+<script src="analytics.js" async></script>
+```
+
+> Use `defer` for scripts that manipulate DOM. Use `async` for independent scripts (like ads/analytics).
+
+
+
+### 115. Can we add multiple CSS and JS files in HTML?
+
+Yes ✅
+
+**Multiple CSS:**
+
+```html
+<link rel="stylesheet" href="reset.css">
+<link rel="stylesheet" href="main.css">
+```
+
+**Multiple JS:**
+
+```html
+<script src="jquery.js"></script>
+<script src="app.js" defer></script>
+```
+
+> Order matters for both: load dependencies first.
+
+
+
+
+
+### 116. What is responsive web design?
+
+It’s a design approach where:
+
+* Layouts **adapt** to screen size.
+* Text and images **resize** automatically.
+* Content is easily readable and usable on any device.
+
+✅ Achieved using:
+
+* CSS media queries
+* Flexbox/Grid
+* Percentage-based widths
+
+
+
+### 117. What is the `<meta viewport>` tag?
+
+It tells the browser **how to control the page's dimensions and scaling**.
+
+```html
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+```
+
+* `width=device-width`: Matches screen width.
+* `initial-scale=1.0`: Default zoom level.
+
+🔍 Without it, mobile browsers may render pages too zoomed out.
+
+
+
+### 118. How do you make images responsive in HTML?
+
+Use CSS to ensure images scale within containers:
+
+```html
+img {
+  max-width: 100%;
+  height: auto;
+}
+```
+
+🔄 This ensures the image resizes proportionally to the parent container.
+
+
+### 119. What is the role of media queries?
+
+Media queries apply different CSS rules based on:
+
+* Screen width
+* Device type
+* Orientation
+
+**Example:**
+
+```css
+@media (max-width: 768px) {
+  body {
+    background-color: lightblue;
+  }
+}
+```
+
+📱 When the screen is 768px or smaller, the background changes.
+
+
+### 120. How do you make a layout responsive using only HTML and CSS?
+
+✅ Use **semantic HTML structure**.
+
+✅ Use **CSS Flexbox** or **CSS Grid**:
+
+```css
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.item {
+  flex: 1 1 100%;
+}
+@media (min-width: 768px) {
+  .item {
+    flex: 1 1 50%;
+  }
+}
+```
+
+✅ Combine with:
+
+* `%` or `vw` units for width
+* `max-width`, `min-width`
+* Media queries
+
+
+### 121. **Is HTML case-sensitive?**
+
+**No**, HTML is **not case-sensitive**.
+This means that `<DIV>`, `<div>`, and `<Div>` are interpreted the same way by the browser.
+
+✅ However, it's a **best practice** to use **lowercase** for tags, attributes, and values (especially in HTML5) for consistency and readability:
+
+```html
+<!-- Recommended -->
+<div class="example">Hello</div>
+
+<!-- Not recommended -->
+<DIV CLASS="example">Hello</DIV>
+```
+
+
+
+### 122. **Can you nest block-level elements inside inline elements?**
+
+**No**, block-level elements **should not** be nested inside inline elements.
+It goes against HTML rules and may lead to **unexpected rendering** or **browser correction**.
+
+❌ Invalid:
+
+```html
+<span><div>Invalid Nesting</div></span>
+```
+
+✅ Valid:
+
+```html
+<div><span>Correct Nesting</span></div>
+```
+
+> Browsers might auto-correct, but it’s bad practice.
+
+
+
+### 123. **What happens if you forget to close a tag?**
+
+If you forget to close a tag:
+
+* The browser tries to auto-correct the markup.
+* It may **break layout or styling**.
+* It can also cause **JavaScript errors** or affect screen readers.
+
+❌ Bad:
+
+```html
+<p>This is a paragraph
+<p>This is another
+```
+
+✅ Good:
+
+```html
+<p>This is a paragraph</p>
+<p>This is another</p>
+```
+
+
+
+### 124. **Can you put multiple `<head>` or `<body>` tags?**
+
+❌ No, an HTML document **should only have one** `<head>` and one `<body>`.
+
+```html
+<!-- Correct -->
+<html>
+  <head></head>
+  <body></body>
+</html>
+```
+
+> Having multiple `<head>` or `<body>` tags can **break your page** and cause **validation errors**.
+
+
+
+### 125. **What are custom data attributes?**
+
+Custom attributes prefixed with `data-`, used to store extra info on elements **without using classes or ids**.
+
+✅ Example:
+
+```html
+<button data-user-id="123" data-role="admin">Click Me</button>
+```
+
+Access in JavaScript:
+
+```js
+const button = document.querySelector('button');
+console.log(button.dataset.userId); // "123"
+console.log(button.dataset.role); // "admin"
+```
+
+
+
+### 126. **What is the use of `<noscript>`?**
+
+The `<noscript>` tag provides fallback content for users with **JavaScript disabled**.
+
+✅ Example:
+
+```html
+<noscript>
+  <p>Please enable JavaScript to use this site.</p>
+</noscript>
+```
+
+
+
+### 127. **What is the `<base>` tag used for?**
+
+Sets the **base URL** for all relative URLs in a document.
+
+✅ Example:
+
+```html
+<base href="https://example.com/">
+<a href="about.html">About</a> <!-- Resolves to https://example.com/about.html -->
+```
+
+> Should be placed **inside `<head>`**, and only one `<base>` tag is allowed.
+
+
+
+### 128. **What is a favicon and how to set it?**
+
+A **favicon** is the small icon that appears in the browser tab.
+
+✅ Example:
+
+```html
+<link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+```
+
+It can also use `.png`, `.svg`, etc.
+
+Place it in the `<head>` section.
+
+
+
+### 129. **What are void elements?**
+
+Void elements are **self-closing** tags that **do not have closing tags**.
+
+Examples include:
+
+* `<img>`
+* `<br>`
+* `<hr>`
+* `<meta>`
+* `<link>`
+* `<input>`
+
+✅ Example:
+
+```html
+<img src="logo.png" alt="Logo">
+```
+
+> Don't try to use a closing tag like `</img>`—it’s invalid.
+
+
+
+### 130. **What is the difference between `innerHTML` and `textContent`?**
+
+| Feature         | `innerHTML`                         | `textContent` |
+| --------------- | ----------------------------------- | ------------- |
+| Returns         | HTML with tags                      | Only text     |
+| Interprets HTML | Yes                                 | No            |
+| Security        | Risk of XSS if used with user input | Safer         |
+| Editable HTML   | Yes                                 | No            |
+
+✅ Example:
+
+```html
+<div id="demo"><b>Hello</b></div>
+```
+
+```js
+// innerHTML:
+console.log(demo.innerHTML); // "<b>Hello</b>"
+
+// textContent:
+console.log(demo.textContent); // "Hello"
+```
+
+
+### 131. **How would you create a multi-step form in HTML?**
+
+A multi-step form breaks a long form into several "steps" using `<fieldset>` and controlled visibility via CSS/JavaScript.
+
+✅ Basic Structure (with JavaScript for step control):
+
+```html
+<form id="multiForm">
+  <fieldset>
+    <h2>Step 1</h2>
+    <input type="text" placeholder="Name" required>
+    <button type="button" onclick="next()">Next</button>
+  </fieldset>
+
+  <fieldset style="display:none;">
+    <h2>Step 2</h2>
+    <input type="email" placeholder="Email" required>
+    <button type="submit">Submit</button>
+  </fieldset>
+</form>
+
+<script>
+  let current = 0;
+  const steps = document.querySelectorAll('fieldset');
+  function next() {
+    steps[current].style.display = 'none';
+    current++;
+    steps[current].style.display = 'block';
+  }
+</script>
+```
+
+
+
+### 132. **How would you make a responsive navbar?**
+
+Use **Flexbox**, **media queries**, and a **hamburger menu** for mobile view.
+
+```html
+<nav class="navbar">
+  <div class="logo">Brand</div>
+  <input type="checkbox" id="toggle">
+  <label for="toggle" class="menu">&#9776;</label>
+  <ul class="nav-links">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+  </ul>
+</nav>
+
+<style>
+.navbar { display: flex; justify-content: space-between; align-items: center; }
+.nav-links { display: flex; list-style: none; }
+.menu { display: none; }
+
+@media (max-width: 600px) {
+  .nav-links { display: none; flex-direction: column; }
+  #toggle:checked + .menu + .nav-links { display: flex; }
+  .menu { display: block; cursor: pointer; }
+}
+</style>
+```
+
+
+
+### 133. **How can you validate a form without JavaScript?**
+
+Use **HTML5 validation attributes**:
+
+```html
+<form>
+  <input type="email" required>
+  <input type="password" pattern=".{6,}" title="6 characters minimum" required>
+  <input type="submit">
+</form>
+```
+
+* `required`
+* `pattern`
+* `min`, `max`
+* `type=email`, `type=number`, etc.
+
+
+
+### 134. **How do you implement tabs using only HTML and CSS?**
+
+Use **radio buttons or checkboxes**:
+
+```html
+<input type="radio" name="tab" id="tab1" checked>
+<label for="tab1">Tab 1</label>
+<input type="radio" name="tab" id="tab2">
+<label for="tab2">Tab 2</label>
+
+<div class="tab-content" id="content1">Content 1</div>
+<div class="tab-content" id="content2">Content 2</div>
+
+<style>
+#tab1:checked ~ #content1 { display: block; }
+#tab2:checked ~ #content2 { display: block; }
+.tab-content { display: none; }
+</style>
+```
+
+
+
+### 135. **How do you embed a Google Map?**
+
+Use an `<iframe>`:
+
+```html
+<iframe
+  src="https://www.google.com/maps/embed?pb=YOUR_MAP_QUERY"
+  width="600"
+  height="450"
+  style="border:0;"
+  allowfullscreen=""
+  loading="lazy">
+</iframe>
+```
+
+You can generate the link from Google Maps → Share → Embed a map.
+
+
+
+### 136. **How do you make a modal using HTML and CSS?**
+
+```html
+<a href="#modal">Open Modal</a>
+
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <a href="#" class="close">&times;</a>
+    <p>This is a modal!</p>
+  </div>
+</div>
+
+<style>
+.modal { display: none; position: fixed; top: 0; left: 0; background: rgba(0,0,0,0.6); width: 100%; height: 100%; }
+.modal:target { display: block; }
+.modal-content { background: white; margin: 10% auto; padding: 20px; width: 300px; }
+.close { float: right; text-decoration: none; }
+</style>
+```
+
+
+
+### 137. **How do you display a loading spinner?**
+
+Use CSS animation:
+
+```html
+<div class="spinner"></div>
+
+<style>
+.spinner {
+  border: 6px solid #ccc;
+  border-top: 6px solid #3498db;
+  border-radius: 50%;
+  width: 40px; height: 40px;
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0); }
+  100% { transform: rotate(360deg); }
+}
+</style>
+```
+
+
+
+### 138. **How do you create a file upload form?**
+
+```html
+<form action="/upload" method="POST" enctype="multipart/form-data">
+  <input type="file" name="myfile" required>
+  <button type="submit">Upload</button>
+</form>
+```
+
+> Use `enctype="multipart/form-data"` to handle file uploads.
+
+
+
+### 139. **How do you make a sticky header?**
+
+Use `position: sticky;`
+
+```html
+<header class="sticky">This is sticky</header>
+
+<style>
+.sticky {
+  position: sticky;
+  top: 0;
+  background: white;
+  z-index: 1000;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+</style>
+```
+
+
+
+### 140. **How do you add tooltips using HTML?**
+
+Use the `title` attribute:
+
+```html
+<button title="Click to submit the form">Submit</button>
+```
+
+Or create custom tooltips with CSS:
+
+```html
+<span class="tooltip">Hover me
+  <span class="tooltip-text">Tooltip info</span>
+</span>
+
+<style>
+.tooltip { position: relative; cursor: pointer; }
+.tooltip-text {
+  visibility: hidden;
+  background: black; color: #fff;
+  position: absolute; top: -30px; left: 0;
+  padding: 5px; border-radius: 5px;
+}
+.tooltip:hover .tooltip-text {
+  visibility: visible;
+}
+</style>
+```
+
+
+
+
+
+### ✅ 141. **HTML vs XHTML**
+
+| Feature            | HTML                                  | XHTML                                 |
+| ------------------ | ------------------------------------- | ------------------------------------- |
+| Syntax Flexibility | Less strict                           | Very strict (must be well-formed)     |
+| Case Sensitivity   | Not case-sensitive                    | Tags and attributes must be lowercase |
+| Closing Tags       | Optional for some tags (e.g., `<br>`) | Mandatory for all tags                |
+| Parsing            | Tolerant of errors                    | Requires strict XML parsing           |
+| MIME Type          | `text/html`                           | `application/xhtml+xml`               |
+
+
+
+### ✅142 **HTML vs XML**
+
+| Feature            | HTML                                 | XML                                |
+| ------------------ | ------------------------------------ | ---------------------------------- |
+| Purpose            | Structure and display of web content | Data transport and storage         |
+| Predefined Tags    | Yes                                  | No (you define your own tags)      |
+| Browsers           | Render HTML                          | Don't render XML, used in backend  |
+| Syntax Flexibility | More lenient                         | Strict, well-formed documents only |
+
+
+
+### ✅ 143 **HTML vs CSS**
+
+| Feature        | HTML                  | CSS                            |
+| -------------- | --------------------- | ------------------------------ |
+| Role           | Structure and content | Style and presentation         |
+| Syntax         | Tag-based             | Selector and declaration-based |
+| Example        | `<p>Hello</p>`        | `p { color: red; }`            |
+| Responsibility | What is on the page   | How it looks                   |
+
+
+
+### ✅144. **HTML vs Markdown**
+
+| Feature        | HTML                 | Markdown                         |
+| -------------- | -------------------- | -------------------------------- |
+| Complexity     | Verbose but powerful | Simple and minimal               |
+| Learning Curve | Moderate             | Easy                             |
+| Flexibility    | Highly customizable  | Limited styling capabilities     |
+| Use Case       | Full web pages       | Writing blog posts, README files |
+
+
+
+### ✅ 145. **HTML vs JavaScript**
+
+| Feature       | HTML                     | JavaScript                         |
+| ------------- | ------------------------ | ---------------------------------- |
+| Purpose       | Structure and content    | Logic, behavior, interactivity     |
+| Language Type | Markup Language          | Programming Language               |
+| Example       | `<button>Click</button>` | `button.addEventListener("click")` |
+| Runs In       | Browser                  | Browser or server (Node.js)        |
+
+
+
+### ✅ 146 **Can we use emoji in HTML?**
+
+Yes! Emojis are just Unicode characters. You can:
+
+```html
+<p>I ❤️ HTML! 🚀</p>
+```
+
+Or use Unicode code:
+
+```html
+<p>&#128512; (😀)</p>
+```
+
+
+
+### ✅ 147. **What are HTML entities?**
+
+HTML entities represent reserved or special characters in HTML.
+
+| Entity   | Meaning            |
+| -------- | ------------------ |
+| `&lt;`   | `<`                |
+| `&gt;`   | `>`                |
+| `&amp;`  | `&`                |
+| `&nbsp;` | Non-breaking space |
+
+
+
+### ✅ 148. **How do you escape characters in HTML?**
+
+Use **entities** to prevent HTML parsing:
+
+* `<` → `&lt;`
+* `>` → `&gt;`
+* `&` → `&amp;`
+* `"` → `&quot;`
+* `'` → `&apos;`
+
+
+
+### ✅ 149. **What is the difference between `&nbsp;` and a regular space?**
+
+| Character | Behavior                               |
+| --------- | -------------------------------------- |
+| Space     | Can collapse or break in lines         |
+| `&nbsp;`  | Non-breaking space (won’t break lines) |
+
+Example:
+
+```html
+<p>Hello&nbsp;World</p>
+```
+
+
+
+### ✅ 150 **What is the use of `&lt;`, `&gt;`, `&amp;`?**
+
+These are **HTML entities** to display symbols:
+
+* `&lt;` = `<` (less than)
+* `&gt;` = `>` (greater than)
+* `&amp;` = `&` (ampersand)
+
+They are useful when you need to **display code** or **avoid parsing** by the browser.
+
+
+
