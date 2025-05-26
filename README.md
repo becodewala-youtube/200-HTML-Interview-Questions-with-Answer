@@ -174,3 +174,83 @@
 
 * `<i>` italicizes text without adding emphasis. Often used for terms or foreign words.
 * `<em>` means **emphasis** on the content, usually rendered in italics but with semantic meaning useful for accessibility.
+
+
+
+
+
+
+### 21. What is the use of `<br>` and `<hr>` tags?
+
+* `<br>` inserts a **line break** within text without creating a new paragraph.
+* `<hr>` inserts a **horizontal rule** (a thematic break or divider) between sections of content.
+
+
+### 22. What are self-closing tags?
+
+* Tags that **do not have a closing tag** and end with a slash inside the tag, e.g., `<br />`, `<img />`.
+* They represent empty elements that don’t enclose any content.
+
+
+
+### 23. What is the `<pre>` tag?
+
+* The `<pre>` tag displays text **preformatted**, preserving spaces, tabs, and line breaks exactly as in the source.
+* Used for code blocks or text where formatting matters.
+
+
+
+### 24. What is the `<code>` tag?
+
+* The `<code>` tag represents a fragment of **computer code** or programming language.
+* Typically styled with a monospace font.
+
+
+
+### 25. What is the `<mark>` tag?
+
+* The `<mark>` tag highlights or **marks** text as relevant or important, usually with a yellow background.
+
+
+
+### 26. What is the `<blockquote>` tag?
+
+* The `<blockquote>` tag is used for **long quotations** from other sources.
+* Usually indents the text to show it is a block quote.
+
+
+
+### 27. What is the `<cite>` tag?
+
+* The `<cite>` tag defines the **title of a work** (e.g., book, article, website) or the source of a quotation.
+* Typically italicized.
+
+
+
+### 28. What is the `<abbr>` tag?
+
+* The `<abbr>` tag is used for **abbreviations or acronyms**.
+* When hovered, it can display the full phrase using the `title` attribute.
+
+```html
+<abbr title="HyperText Markup Language">HTML</abbr>
+```
+
+
+
+### 29. What is the `<address>` tag?
+
+* The `<address>` tag contains **contact information** for the author or owner of a document or article.
+* Usually displayed in italic by browsers.
+
+
+
+### 30. What is the `<time>` tag?
+
+* The `<time>` tag represents a **specific time or date**.
+* It can include a machine-readable `datetime` attribute for better SEO and accessibility.
+
+```html
+<time datetime="2025-05-24">May 24, 2025</time>
+```
+
