@@ -92,3 +92,85 @@
 3. `<head>` – meta info (title, charset, styles, scripts)
 4. `<body>` – visible content
 
+
+
+
+
+### 11. What is the `<html>` tag?
+
+* The **root element** wrapping the entire HTML document.
+* Contains the `<head>` and `<body>` tags.
+
+
+
+### 12. What is the `<head>` tag used for?
+
+* Holds **metadata** and resources like:
+
+  * `<title>` of the page
+  * Character encoding (`<meta>`)
+  * Links to CSS files
+  * Scripts
+  * SEO tags
+
+
+
+### 13. What is the `<body>` tag used for?
+
+* Contains the **visible content** of the webpage like text, images, links, buttons, etc.
+
+
+
+### 14. How do you insert comments in HTML?
+
+* Comments are inserted between `<!--` and `-->` and are **not displayed** in the browser.
+
+```html
+<!-- This is a comment -->
+```
+
+
+
+### 15. What is the use of the `lang` attribute in HTML?
+
+* Specifies the **language** of the document for accessibility and SEO.
+* Helps browsers and screen readers select the correct language settings.
+
+```html
+<html lang="en"> <!-- English -->
+```
+
+
+
+### 16. What is the difference between block and inline elements?
+
+* **Block elements** take up the full width available and start on a new line. Examples: `<div>`, `<p>`, `<h1>`.
+* **Inline elements** take only the width they need and do not start on a new line. Examples: `<span>`, `<a>`, `<strong>`.
+
+
+
+### 17. What is the `<div>` tag used for?
+
+* The `<div>` tag is a **block-level container** used to group other HTML elements.
+* It has **no semantic meaning** by itself but is used to apply CSS styles or manipulate groups of elements with JavaScript.
+
+
+
+### 18. What is the `<span>` tag used for?
+
+* The `<span>` tag is an **inline container** used to group inline elements.
+* Like `<div>`, it has no semantic meaning but is useful for styling or scripting parts of text without breaking the flow.
+
+
+
+### 19. What is the difference between `<b>` and `<strong>`?
+
+* `<b>` **bolds text** without implying any extra importance.
+* `<strong>` **indicates strong importance** or emphasis, and browsers usually render it as bold by default.
+
+
+
+### 20. What is the difference between `<i>` and `<em>`?
+
+* `<i>` italicizes text without adding emphasis. Often used for terms or foreign words.
+* `<em>` means **emphasis** on the content, usually rendered in italics but with semantic meaning useful for accessibility.
