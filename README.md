@@ -254,3 +254,144 @@
 <time datetime="2025-05-24">May 24, 2025</time>
 ```
 
+
+
+### 31. What are attributes in HTML?
+
+Attributes are **key-value pairs** added to HTML tags that provide **additional information** about an element.
+They are always written in the opening tag and affect how the element behaves or displays.
+
+**Example:**
+
+```html
+<a href="https://example.com">Visit</a>
+```
+
+Here, `href` is an attribute that tells where the link goes.
+
+ 
+
+### 32. What is the `title` attribute?
+
+The `title` attribute specifies **extra information** about an element, which is often displayed as a tooltip when the user hovers over the element.
+
+**Example:**
+
+```html
+<p title="Hello there!">Hover over me</p>
+```
+
+ 
+
+### 33. What is the difference between `id` and `class`?
+
+* `id` is a **unique identifier** for a single HTML element. It should not be repeated in a page.
+* `class` is used to group multiple elements and apply **shared styles or behaviors**.
+
+**Example:**
+
+```html
+<div id="header"></div>
+<div class="card"></div>
+<div class="card"></div>
+```
+
+ 
+
+### 34. What is the `style` attribute used for?
+
+The `style` attribute allows **inline CSS styling** of individual elements.
+
+**Example:**
+
+```html
+<p style="color: blue; font-size: 18px;">Styled Text</p>
+```
+
+ 
+
+### 35. What are `data-*` attributes?
+
+Custom attributes used to store **extra data** in HTML elements. They do not affect layout or style but are often used by JavaScript.
+
+**Example:**
+
+```html
+<div data-user-id="1234" data-role="admin">User</div>
+```
+
+In JavaScript:
+
+```js
+element.dataset.userId  // "1234"
+element.dataset.role    // "admin"
+```
+
+ 
+
+### 36. What is the use of the `alt` attribute in images?
+
+The `alt` (alternative text) attribute is used with `<img>` tags to describe the **image content**. It is important for accessibility and shown if the image fails to load.
+
+**Example:**
+
+```html
+<img src="logo.png" alt="Company Logo" />
+```
+
+ 
+
+### 37. What is the difference between `readonly` and `disabled`?
+
+* `readonly` allows users to **see and copy the value**, but not change it.
+* `disabled` **disables** the element entirely — users cannot interact with it, and it won't be submitted in a form.
+
+**Example:**
+
+```html
+<input type="text" value="Read Only" readonly>
+<input type="text" value="Disabled" disabled>
+```
+
+ 
+
+### 38. What is the `tabindex` attribute?
+
+The `tabindex` attribute defines the **tab order** of elements when navigating with the `Tab` key.
+
+* A positive value sets a specific order.
+* `0` follows natural flow.
+* `-1` makes it **focusable by JavaScript only**.
+
+**Example:**
+
+```html
+<button tabindex="1">First</button>
+<button tabindex="2">Second</button>
+```
+
+ 
+
+### 39. What is the `contenteditable` attribute?
+
+This attribute allows the content of the element to be **editable directly in the browser**.
+
+**Example:**
+
+```html
+<div contenteditable="true">Click and edit this text</div>
+```
+
+ 
+
+### 40. What is the `hidden` attribute?
+
+The `hidden` attribute makes an element **invisible** on the page. It behaves like `display: none` in CSS.
+
+**Example:**
+
+```html
+<p hidden>This paragraph is hidden.</p>
+```
+
+ 
